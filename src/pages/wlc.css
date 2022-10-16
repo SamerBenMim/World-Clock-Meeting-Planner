@@ -14,7 +14,7 @@
     color: white;
 }
 .time{
-    font-size: 150px;
+    font-size: 130px;
 }
 .top{
     display: flex;
@@ -35,7 +35,7 @@
     text-shadow: rgb(0 0 0) 0px 1px 1px;
 }
 .s{
-    letter-spacing: 8px;
+    letter-spacing: 9px;
 }
 
 @media only screen and (max-width: 800px){
@@ -52,4 +52,7 @@
     .day{
         font-size: 17px;
     }
+}
+.bar{
+    
 }

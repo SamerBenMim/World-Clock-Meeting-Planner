@@ -1,0 +1,52 @@
+.btn{
+    border-radius: 8px;
+    background-color: #ffffff8c;
+    color: #373a4a;
+    position: absolute;
+    top: 25px;
+    right: -150px;
+    width: 125px;
+    height:42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: Lato, "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+    transform: translateX(-0);
+    transition: .4s ease-in-out;
+}
+.anim{
+    transform: translateX(-170px);
+    transition: .4s ease-in-out;
+
+}
+.a{
+    transition: ease-in-out;
+}
+
+
+
+
+.btn div:hover{
+    background-color: #ffffff;
+    color: #373a4a;
+}
+
+@keyframes anim{
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(-170px);
+    }
+}
+@keyframes undoanim{
+    0%{
+        transform: translateX(-170px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}

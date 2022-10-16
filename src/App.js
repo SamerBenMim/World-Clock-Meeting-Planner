@@ -5,12 +5,20 @@ import WelcomPage from "./pages/welcomPage";
 
 function App() {
   const [content, setContent] = useState("");
+  const [wlc, setwlc] = useState(true)
+  const setWlc = ()=>{
+    console.log("first")
+    setwlc(false)
+  }
   return (
     <div>
 
-      {/* <MapChart setTooltipContent={setContent} />
-      <ReactTooltip>{content}</ReactTooltip> */}
-      <WelcomPage/>
+      {!wlc &&<><MapChart setTooltipContent={setContent} />
+      <ReactTooltip>{content}</ReactTooltip>
+      </>
+      }
+
+      {wlc&& <WelcomPage setWlc ={setWlc}/>} 
     </div>
   );
 }
