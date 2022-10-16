@@ -7,14 +7,17 @@ function App() {
   const [content, setContent] = useState("");
   const [wlc, setwlc] = useState(true)
   const setWlc = ()=>{
-    console.log("first")
     setwlc(false)
+  }
+  const setnotWlc = ()=>{
+    setwlc(true)
   }
   return (
     <div>
 
-      {!wlc &&<><MapChart setTooltipContent={setContent} />
+      {!wlc &&<><MapChart setTooltipContent={setContent} setWlc={setnotWlc} />
       <ReactTooltip>{content}</ReactTooltip>
+      
       </>
       }
 
