@@ -1,4 +1,3 @@
-import { click } from "@testing-library/user-event/dist/click";
 import React, { memo, useEffect, useState } from "react";
 import {
   ZoomableGroup,
@@ -8,16 +7,17 @@ import {
 } from "react-simple-maps";
 
 const MapChart = ({ setTooltipContent }) => {
+  const monSet = new Set();
   const [clicked, setClicked] = useState([])
   useEffect(() => {
     let a=  document.querySelector(".rsm-svg")
-    a.setAttribute("viewBox", "15 70 800 600"); 
+    a.setAttribute("viewBox", "25 80 800 600"); 
 
   }, [])
   return (
     <div data-tip="">
       <ComposableMap >
-        <ZoomableGroup  zoom={.9} minZoom={0.7}>
+        <ZoomableGroup  zoom={.85} minZoom={0.7}>
           <Geographies geography="/features.json">
             {({ geographies }) =>
               geographies.map((geo) => (
@@ -26,13 +26,14 @@ const MapChart = ({ setTooltipContent }) => {
                   key={geo.rsmKey}
                   geography={geo}
                   onMouseEnter={() => {
-                    setTooltipContent(`${geo.properties.name}`);
+                    console.log(geo)
+                    setTooltipContent(`${geo.properties.name} (UTC ${(geo.properties.time)>0?"+":""}${geo.properties.time})`);
                   }}
                   onClick={
                     ()=>{
-                      setClicked(clicked => [...clicked, geo.id])
-                      document.querySelector(`#${geo.id}`).setAttribute("style","fill:yellow ; outline: none;")
-                      console.log(clicked)
+                      if(clicked.includes(geo.id))  setClicked(clicked => clicked.filter(el=>el!=geo.id))
+                      else setClicked(clicked => [...clicked, geo.id])
+                      document.querySelector(`#${geo.id}`).setAttribute("style","fill:red ; outline: none;")
                     }
                   }
                   onMouseLeave={() => {
@@ -40,17 +41,19 @@ const MapChart = ({ setTooltipContent }) => {
                   }}
                   style={{
                     default: {
-                      
-                      fill: (clicked.includes(geo.id)==true) ?"red":"#D6D6DA",
+
+                      fill: (clicked.includes(geo.id)) ?"red":"#D6D6DA",
                       outline: "none"
                     },
                     hover: {
                       fill: "#F53",
-                      outline: "none"
+                      outline: "none",
+                      cursor:"pointer"
                     },
                     pressed: {
                       fill: "#E42",
-                      outline: "none"
+                      outline: "none",
+                      cursor:"pointer"
                     }
                   }}
                 />
