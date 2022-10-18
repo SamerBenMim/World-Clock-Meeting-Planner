@@ -73,7 +73,7 @@
 }
 .midnight{
     position: absolute;
-    top: -30px;
+    top: -31px;
     font-size: 14px;
     left: -16px;
 }
@@ -82,7 +82,7 @@
 }
 .hours div p {
     position: absolute;
-    top: -26px;
+    top: -29px;
     font-size: 12px;
     left: -16px;
 }
@@ -104,5 +104,47 @@
     font-size: 15px;
     color: white;
     justify-content: center;
+    cursor: pointer;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 25px;
+    /* background: #d6d6da; */
+}
+.c0{
+background-color: #ea484d !important;
+}
+.c1{
+background-color: #ec654e !important;
+}
+.c2{
+background-color: #ef874c !important;
+}
+.c3{
+background-color: #f3a74c !important;
+}
+.c4{
+background-color: #f8c43d !important;
+}
+.c5{
+background-color:#e1c63b !important;
+}
+.c6{
+background-color: #c1cc36 !important;
+}
+.c7{
+background-color: #7fcd31!important;
+}
+.c8{
+background-color: #5aaf2b !important;
+}
+.best{
+    box-sizing: border-box;
+    padding: 0px;
+    border: #000000 solid 3px ! important;
     cursor: pointer;
 }

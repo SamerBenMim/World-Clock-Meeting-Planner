@@ -8,7 +8,7 @@
             "type": "Polygon",
             "arcs": [[0, 1, 2, 3, 4, 5]],
             "id": "AFG",
-            "properties": { "name": "Afghanistan" ,"time" : 4.5}
+            "properties": { "name": "Afghanistan" ,"time" : 5}
           
           },
           {
@@ -51,7 +51,7 @@
             "type": "MultiPolygon",
             "arcs": [[[37]], [[38]]],
             "id": "AUS",
-            "properties": { "name": "Australia" ,"time" : 9.5}
+            "properties": { "name": "Australia" ,"time" : 10}
           
           },
           {
@@ -545,7 +545,7 @@
             "type": "Polygon",
             "arcs": [[-191, 382, -189, -117, -188, 383, -77, 384, 385]],
             "id": "IND",
-            "properties": { "name": "India" ,"time" : 5.5}
+            "properties": { "name": "India" ,"time" : 6}
           },
           {
             "type": "Polygon",
@@ -690,7 +690,7 @@
             "type": "Polygon",
             "arcs": [[466]],
             "id": "LKA",
-            "properties": { "name": "Sri Lanka" ,"time" : 5.5 }
+            "properties": { "name": "Sri Lanka" ,"time" : 6 }
           },
           {
             "type": "Polygon",
@@ -756,7 +756,7 @@
             "type": "Polygon",
             "arcs": [[487, -75, -384, -187, -456, 488]],
             "id": "MMR",
-            "properties": { "name": "Myanmar" ,"time" :6.5 }
+            "properties": { "name": "Myanmar" ,"time" :7}
           },
           {
             "type": "Polygon",
@@ -842,7 +842,7 @@
             "type": "Polygon",
             "arcs": [[-383, -190]],
             "id": "NPL",
-            "properties": { "name": "Nepal" ,"time" : 5.75 }
+            "properties": { "name": "Nepal" ,"time" : 6 }
           },
           {
             "type": "MultiPolygon",
