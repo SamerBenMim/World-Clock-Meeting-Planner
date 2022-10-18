@@ -239,7 +239,7 @@ const MapChart = ({ setTooltipContent, setWlc }) => {
         <div className={` c${colors[23]} ${maxindex == 23 ? "best" : ""}`}></div>
       </div>
       {maxindex!=-1&&<div>
-      the best time to Schedule a meeting is at {maxindex}:00 o'clock UTC
+      The best time to Schedule a meeting is at {maxindex}:00 o'clock UTC
     </div>}
     <br/>
     <br/>

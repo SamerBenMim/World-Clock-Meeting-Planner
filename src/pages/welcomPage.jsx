@@ -51,7 +51,7 @@ let [hour, minute, second] = new Date()
 
             <div className='content'>
                 <div className='top'>
-                        <div className='time'>{(hour<9)?"0" :""}{hour}:{minute}</div>
+                        <div className='time'>{(hour<=9)?"0" :""}{hour}:{minute}</div>
                         <div className='details'>
                             <div>{AM}</div>
                             <div className='s'>{second}</div>
