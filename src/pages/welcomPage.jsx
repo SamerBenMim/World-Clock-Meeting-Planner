@@ -37,7 +37,7 @@ let [hour, minute, second] = new Date()
     return (
         <LazyLoad>
 
-        <div className='container'>
+        <div className='container' >
             <div className='bar' style={{height : "100vh" , width:"130px",position : "absolute",right:"0",display:"flex",alignItems:"center",zIndex:"0"}}
             onMouseOver={()=>{setmenu(true)}}
             >

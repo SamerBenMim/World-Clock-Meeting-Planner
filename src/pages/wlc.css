@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
-    background-color: transparent;
+    /* background-color: transparent; */
+    background-color: #161616;
 }
 .content{
     user-select: none;
