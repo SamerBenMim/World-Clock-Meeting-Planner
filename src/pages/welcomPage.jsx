@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Btn from '../components/Btn'
 import "./wlc.css"
+import LazyLoad from "react-lazyload";
+
 
 const WelcomPage = ({setWlc}) => {
 
@@ -33,6 +35,8 @@ let [hour, minute, second] = new Date()
 }, 1000);    
 
     return (
+        <LazyLoad>
+
         <div className='container'>
             <div className='bar' style={{height : "100vh" , width:"130px",position : "absolute",right:"0",display:"flex",alignItems:"center",zIndex:"0"}}
             onMouseOver={()=>{setmenu(true)}}
@@ -42,7 +46,7 @@ let [hour, minute, second] = new Date()
             </div>
             <div className='bar2' style={{height : "100vh" , width:"90vw",position : "absolute",right:"130px",display:"flex",alignItems:"center",zIndex:"0"}}
             onMouseOver={()=>{setmenu(false)}}
-           >
+            >
             </div>
             <Btn name="Map" id="0" anim={menu} setWlc={setWlc}  />
             <Btn name="How to use" id="1" anim={menu}/>
@@ -62,6 +66,7 @@ let [hour, minute, second] = new Date()
                 </div>
             </div>
         </div>
+    </LazyLoad>       
     )
 }
 
